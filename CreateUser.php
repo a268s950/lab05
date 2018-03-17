@@ -32,8 +32,6 @@ if($username!="")
     }
     //echo "$rowUserName hi ".$row["user_id"]." paul";
 
-
-
     if($rowUserName == $username )
       echo "<p>The user already exists</p>";
     else
@@ -45,7 +43,6 @@ if($username!="")
         echo "<p>User was not added because the query failed <p>";
     }
 
-    // free result set
   }
 }
 else {
