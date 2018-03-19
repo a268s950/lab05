@@ -4,8 +4,26 @@
 </head>
 <body>
   <form name="myForm" method="POST" action="ViewUserPosts.php">
-    Enter user name: <input type="text" name="username" id="username"><br>
+    <label>Select user</label>
+    <select id = "myList">
 
+      <?php
+        error_reporting(E_ALL);
+        ini_set("display_errors", 1);
+
+        $connection = mysql_connect('mysql.eecs.ku.edu', 'a268s950', 'iH3Aeh4w'); //The Blank string is the password
+        mysql_select_db('a268s950');
+
+        $query = "SELECT * FROM Users"; //You don't need a ; like you do in SQL
+        $result = mysql_query($query);
+        while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
+
+        $users = $row["user_id"];
+        echo "<option value=\"" . $users . "\">" . $users . "</option>";
+        }
+      ?>
+      <option value = "1">one</option>
+    </select>
   <input type="submit" value="Submit">
 
   </form>
