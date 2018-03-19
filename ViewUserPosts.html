@@ -3,10 +3,10 @@
 
 </head>
 <body>
-  
+
   <form name="myForm" method="POST" action="ViewUserPosts.php">
     <label>Select user</label>
-    <select id = "myList">
+    <select name = "myList" id = "myList">
 
       <?php
         error_reporting(E_ALL);
@@ -23,7 +23,6 @@
         echo "<option value=\"" . $users . "\">" . $users . "</option>";
         }
       ?>
-      <option value = "1">one</option>
     </select>
   <input type="submit" value="Submit">
 

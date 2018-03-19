@@ -8,7 +8,7 @@ ini_set("display_errors", 1);
 
 $mysqli = new mysqli("mysql.eecs.ku.edu", "a268s950", "iH3Aeh4w", "a268s950");
 
-$query = "SELECT * FROM Users"; //You don't need a ; like you do in SQL
+$query = "SELECT user_id FROM Users"; //You don't need a ; like you do in SQL
 $result = $mysqli->query($query);
 
 echo '<table border="1">'; // start a table tag in the HTML
